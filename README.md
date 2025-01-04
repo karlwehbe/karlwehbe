@@ -1,4 +1,4 @@
-# 💫 About Me:
+# About Me:
 Currently a third year student at Mcgill University studying CS and AI
 
 
