@@ -1,5 +1,5 @@
 # About Me:
-Currently a third year student @ Mcgill University studying CS & AI
+Currently a fourth year student @ Mcgill University studying CS & AI
 
 
 ## 🌐 Socials:
