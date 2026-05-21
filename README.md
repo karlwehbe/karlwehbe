@@ -2,7 +2,7 @@
 Final year CS student @ McGill.<br>Currently building AI agents for business automisation @ Agentyx - AI startup
 
 ## 🛠️ Personal Projects:
-Content-sharing Social Platform -> https://www.themindcast.com/<br>
+Social Media Platform -> https://www.themindcast.com/<br>
 Academic Events Booking & Management for McGill -> https://bookify-ten-beige.vercel.app/<br>
 More exciting projects coming soon...
 
