@@ -1,12 +1,12 @@
 # 🦦 About Me:
 Final year CS student @ McGill.<br>Currently building AI agents for business automisation.
 
-# 🎨 Personal Projects:
+## 🎨 Personal Projects:
 Personal social platform -> https://www.themindcast.com/<br>
-Academic Events Booking & Management for Mcgill -> https://bookify-ten-beige.vercel.app/
-More coming soon...
+Academic Events Booking & Management for Mcgill -> https://bookify-ten-beige.vercel.app/<br>
+More exciting projects coming soon...
 
-# 🌐 Connect with me:
+## 🌐 Connect with me:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/karl-wehbe) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:karlwehbeh@gmail.com) 
 
 
