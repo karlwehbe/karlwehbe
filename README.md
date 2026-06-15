@@ -1,5 +1,5 @@
 #  🦦 About Me:
-Graduated as CS student from McGill.<br>Currently building AI agents for business automisation @ Agentyx - AI startup
+Graduated as CS student from McGill.<br>
 
 ## 🕹️ Personal Projects:
 Social Media Platform -> https://www.themindcast.com/<br>
