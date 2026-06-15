@@ -1,5 +1,5 @@
 #  🦦 About Me:
-Graduated as CS student from McGill.<br>
+B.Sc. Computer Science @ McGill '26.<br>
 
 ## 🕹️ Personal Projects:
 Social Media Platform -> https://www.themindcast.com/<br>
