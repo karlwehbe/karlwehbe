@@ -232,7 +232,12 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
         edges += request.json()['data']['user']['repositories']['edges']            # Add on to the LoC count
         return loc_query(owner_affiliation, comment_size, force_cache, request.json()['data']['user']['repositories']['pageInfo']['endCursor'], edges)
     else:
-        return cache_builder(edges + request.json()['data']['user']['repositories']['edges'], comment_size, force_cache)
+        return cache_builder(
+            [e for e in edges + request.json()['data']['user']['repositories']['edges']
+             if e and e.get('node') and e['node'].get('nameWithOwner')],
+            comment_size,
+            force_cache,
+        )
 
 
 def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
@@ -292,8 +297,11 @@ def flush_cache(edges, filename, comment_size):
             data = f.readlines()[:comment_size] # only save the comment
     with open(filename, 'w') as f:
         f.writelines(data)
-        for node in edges:
-            f.write(hashlib.sha256(node['node']['nameWithOwner'].encode('utf-8')).hexdigest() + ' 0 0 0 0\n')
+        for edge in edges:
+            node = edge.get('node') if edge else None
+            if not node or not node.get('nameWithOwner'):
+                continue
+            f.write(hashlib.sha256(node['nameWithOwner'].encode('utf-8')).hexdigest() + ' 0 0 0 0\n')
 
 
 def add_archive():
@@ -332,7 +340,11 @@ def stars_counter(data):
     Count total stars in repositories owned by me
     """
     total_stars = 0
-    for node in data: total_stars += node['node']['stargazers']['totalCount']
+    for edge in data:
+        node = edge.get('node') if edge else None
+        if not node or 'stargazers' not in node:
+            continue
+        total_stars += node['stargazers']['totalCount']
     return total_stars
 
 
