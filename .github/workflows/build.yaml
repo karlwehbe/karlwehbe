@@ -1,9 +1,6 @@
 name: README build
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
   schedule:
     - cron: "0 4 * * *"
 jobs:
@@ -15,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
           token: ${{ secrets.ACCESS_TOKEN }}
       - name: Get Python
         uses: actions/setup-python@v5
@@ -42,5 +39,6 @@ jobs:
           git diff
           git config --global user.email "github-actions-bot@karlwehbe.github.io"
           git config --global user.name "karlwehbe/GitHub-Actions-Bot"
-          git commit -m "Updated README" -a || echo "No changes to commit"
+          git commit -m "Updated README [skip ci]" -a || echo "No changes to commit"
+          git pull --rebase "https://x-access-token:${ACCESS_TOKEN}@github.com/karlwehbe/karlwehbe.git" main || true
           git push "https://x-access-token:${ACCESS_TOKEN}@github.com/karlwehbe/karlwehbe.git" HEAD:main
