@@ -4,4 +4,3 @@
     <img alt="Karl Wehbe's GitHub Profile README" src="https://raw.githubusercontent.com/karlwehbe/karlwehbe/main/light_mode.svg">
   </picture>
 </a>
-# karlwehbe
